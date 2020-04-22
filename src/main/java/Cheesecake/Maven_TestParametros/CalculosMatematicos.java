@@ -15,7 +15,7 @@ public class CalculosMatematicos {
 
 		ArrayList<Integer> lista = new ArrayList<Integer>();
 		
-		for(int i=1;i<=num;i++) {
+		for(int i=2;i<=num;i++) {
 			if(esPrimo(i)) {
 				lista.add(i);
 			}
