@@ -1,6 +1,7 @@
 package Cheesecake.Maven_TestParametros;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class CalculosMatematicos {
 	int primo;
@@ -22,7 +23,12 @@ public class CalculosMatematicos {
 		}
 		return lista;
 	}
-	
+	public static void recorrerArrayListPrimos(ArrayList<Integer> lista) {
+		Iterator<Integer> it=lista.iterator();
+		while(it.hasNext()) {
+			System.out.print(", "+it.next());
+		}
+	}
 	public static boolean esPrimo(int numero) {
 		
 		boolean primo = true;
