@@ -1,7 +1,9 @@
 package Cheesecake.Maven_TestParametros;
 
-public class CalculosMatematicos {
+import java.util.ArrayList;
 
+public class CalculosMatematicos {
+	int primo;
 	public static int potencia(int base, int exponente) {
 
 		int resul = 1;
@@ -9,13 +11,20 @@ public class CalculosMatematicos {
 			resul = base * potencia(base, exponente - 1);
 		return resul;
 	}
-	
-	public static void nohacena() {
+	public static ArrayList<Integer> listadePrimos(int num){
 
+		ArrayList<Integer> lista = new ArrayList<Integer>();
 		
+		for(int i=1;i<=num;i++) {
+			if(esPrimo(i)) {
+				lista.add(i);
+			}
+		}
+		return lista;
 	}
+	
 	public static boolean esPrimo(int numero) {
-
+		
 		boolean primo = true;
 		int divisor = 3;
 		if(numero !=2 && numero%2==0)
