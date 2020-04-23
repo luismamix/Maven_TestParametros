@@ -1,6 +1,9 @@
 package Cheesecake.Maven_TestParametros;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+
+
 
 public class CalculosMatematicos {
 	int primo;
@@ -35,6 +38,13 @@ public class CalculosMatematicos {
 			divisor+=2;
 		}
 		return primo;
+	}
+	
+	public static void recorrerArrayListPrimos(ArrayList<Integer> lista) {
+		Iterator<Integer> it=lista.iterator();
+		while(it.hasNext()) {
+			System.out.print(", "+it.next());
+		}
 	}
 	
 	//max int 2147483647
